@@ -92,7 +92,7 @@ class DCGAN(object):
       self.data_X, self.data_y = self.load_mnist()
       self.c_dim = self.data_X[0].shape[-1]
     elif self.dataset_name == 'wikiart':
-      self.data = glob(os.path.join("./data", self.dataset_name, self.input_fname_pattern))
+      self.data = glob(os.path.join("/kaggle/input", self.dataset_name, self.input_fname_pattern))
 
       self.c_dim = 3
       self.label_dict = {}
